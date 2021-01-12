@@ -1,0 +1,24 @@
+@media (min-width: 700px) {
+
+    .wrapper {
+        padding: $spacing $spacing * 6;
+    
+        &::before {
+            content: url("../images/bg-bottom.svg");
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translate();
+            z-index: -1;
+        }
+    }
+
+
+    .main {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

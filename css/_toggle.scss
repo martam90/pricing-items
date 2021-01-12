@@ -1,0 +1,12 @@
+.wrapper.active-mode {
+
+    .price--hidden-white {
+        display: block;
+        color: $very-light;
+    }
+
+    .price--hidden-grey {
+        display: block;
+        color: $dark-blue;
+    }
+}
