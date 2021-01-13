@@ -1,24 +1,37 @@
 @media (min-width: 700px) {
+  .wrapper {
+    padding: $spacing $spacing * 6;
 
-    .wrapper {
-        padding: $spacing $spacing * 6;
-    
-        &::before {
-            content: url("../images/bg-bottom.svg");
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            transform: translate();
-            z-index: -1;
-        }
+    &::before {
+      content: url("../images/bg-bottom.svg");
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translate();
+      z-index: -1;
     }
+  }
 
+  .main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
-    .main {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+    .main__container {
+      &:nth-child(1) {
+        border-radius: 1em 0 0 1em;
+        box-shadow: 0 5px 8px 5px rgba(187, 186, 186, 0.5);
+      }
+
+      &:nth-child(2) {
+        padding: $spacing + 1.5 $spacing;
+      }
+
+      &:nth-child(3) {
+        border-radius: 0 1em 1em 0;
+        box-shadow: 0 5px 8px 5px rgba(187, 186, 186, 0.5);
+      }
     }
-
+  }
 }

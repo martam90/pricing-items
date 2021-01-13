@@ -1,122 +1,111 @@
 .main__container {
-    display: block;
-    text-align: center;
-    margin-bottom: $spacing + 1.875;
-    padding: $spacing;
-    border-radius: 1em;
+  display: block;
+  text-align: center;
+  margin-bottom: $spacing + 1.875;
+  padding: $spacing;
+  border-radius: 1em;
+  width: 100%;
+
+  &.container--light {
+    background-color: $white;
+  }
+
+  &.container--blue {
+    background-image: $gradient;
+  }
+
+  .main__title {
+    padding: $spacing 0;
+
+    &.title--grey {
+      color: $greyish-blue;
+    }
+
+    &.title--white {
+      color: $very-light;
+    }
+  }
+
+  .main__price {
+    margin: 0;
+    padding-bottom: $spacing - 0.5;
+    font-size: $font-size * 2.5;
+
+    .dollar {
+      vertical-align: 0.2em;
+      font-size: $font-size + 0.5;
+    }
+
+    &.price--white {
+      color: $very-light;
+    }
+
+    &.price--grey {
+      color: $dark-blue;
+    }
+
+    &.price--hidden-white,
+    &.price--hidden-grey {
+      display: none;
+    }
+  }
+
+  .main__list {
+    margin: 0;
     width: 100%;
 
-    &.container--light {
+    .main__item {
+      padding: $spacing 0;
+      border-top: 1px solid $light-greyish;
+
+      &:last-child {
+        border-bottom: 1px solid $light-greyish;
+      }
+
+      &.item--grey {
+        color: $greyish-blue;
+      }
+
+      &.item--white {
+        color: $very-light;
+      }
+    }
+  }
+
+  .cta {
+    @include cta;
+
+    &.cta--blue {
+      background-image: $gradient;
+      color: white;
+
+      &:hover {
+        border: 1px solid $greyish-blue;
+        background-image: none;
         background-color: $white;
+        color: $blue;
+        cursor: pointer;
+        transition: all ease-in-out 300ms;
+      }
     }
 
-    &.container--blue {
-        background-image: $gradient;
+    &.cta--white {
+      background-color: $white;
+      color: $blue;
+
+      &:hover {
+        background-color: transparent;
+        color: $white;
+        border: 1px solid $very-light;
+        cursor: pointer;
+        transition: all ease-in-out 300ms;
+      }
     }
-
-    .main__title {
-        padding: $spacing 0;
-
-        &.title--grey {
-            color: $greyish-blue;
-        }
-
-        &.title--white {
-            color: $very-light;
-        }
-    }
-
-    .main__price {
-        margin: 0;
-        padding-bottom: $spacing - 0.5;
-        font-size: $font-size * 2.5;
-
-        .dollar {
-            vertical-align: 0.2em;
-            font-size: $font-size + 0.5;
-        }
-
-        &.price--white {
-            color: $very-light;
-        }
-
-        &.price--grey {
-            color: $dark-blue;
-        }
-
-        &.price--hidden-white,
-        &.price--hidden-grey {
-            display: none;
-            color: $very-light;
-    
-            &.active {
-                display: block;
-                color: $dark-blue;
-            }
-        }
-
-        
-    }
-
-    
-
-    .main__list {
-        margin: 0;
-        width: 100%;
-
-        .main__item {
-            padding: $spacing 0;
-            border-top: 1px solid $light-greyish;
-
-            &:last-child {
-                border-bottom: 1px solid $light-greyish;
-            }
-
-            &.item--grey {
-                color: $greyish-blue;
-            }
-
-            &.item--white {
-                color: $very-light;
-            }
-        }
-    }
-
-    .cta {
-        @include cta;
-        
-        &.cta--blue {
-            background-image: $gradient;
-            color: white;
-
-            &:hover {
-                border: 1px solid $greyish-blue;
-                background-image: none;
-                background-color: $white;
-                color: $blue;
-                cursor: pointer;
-                transition: all ease-in-out 300ms;
-            }
-        }
-
-        &.cta--white {
-            background-color: $white;
-            color: $blue;
-
-            &:hover {
-                background-color: transparent;
-                color: $white;
-                border: 1px solid $very-light;
-                cursor: pointer;
-                transition: all ease-in-out 300ms;
-            }
-        }
-    }
+  }
 }
 
 .attribution {
-    text-align: center;
-    font-weight: 400;
-    font-size: $font-size - 0.3;
+  text-align: center;
+  font-weight: 400;
+  font-size: $font-size - 0.3;
 }
-

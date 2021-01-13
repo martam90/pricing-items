@@ -1,62 +1,60 @@
 .wrapper {
-    position: relative;
-    padding: $spacing;
-    background-color: $very-light;
-    z-index: 99;
-    overflow: hidden;
+  position: relative;
+  padding: $spacing;
+  background-color: $very-light;
+  z-index: 99;
+  overflow: hidden;
 
-    &::after {
-        content: url("../images/bg-top.svg");
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translate(50%, -5%);
-        z-index: -1;
-    }
+  &::after {
+    content: url("../images/bg-top.svg");
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -5%);
+    z-index: -1;
+  }
 }
 
-
 .content--top {
-    padding: $spacing * 3 $spacing * 2.5;
+  padding: $spacing * 3 $spacing * 2.5;
 
-    .title--large {
-        text-align: center;
-        color: $dark-blue;
-        padding-bottom: $spacing;
+  .title--large {
+    text-align: center;
+    color: $dark-blue;
+    padding-bottom: $spacing;
+  }
+
+  .content__detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $spacing;
+
+    .detail--grey {
+      color: $greyish-blue;
     }
 
-    .content__detail {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: $spacing;
+    .btn__toggle {
+      @include btn-toggle;
 
-        .detail--grey {
-            color: $greyish-blue;
-        }
+      position: relative;
+      padding: $spacing $spacing + 0.8;
+      border-radius: 1.2em;
 
-        .btn__toggle {
-            @include btn-toggle;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0.3em;
+        right: 0.3em;
+        width: 1.6em;
+        height: 1.8em;
+        background-color: $very-light;
+        border-radius: 50%;
+      }
 
-            position: relative;
-            padding: $spacing $spacing + 0.8;
-            border-radius: 1.2em;
-
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 1.6em;
-                height: 1.7em;
-                background-color: $very-light;
-                transform: translate(-5px, 5px);
-                border-radius: 50%;
-            }
-
-            &:hover {
-                cursor: pointer;
-            }
-        }
+      &:hover {
+        cursor: pointer;
+      }
     }
+  }
 }

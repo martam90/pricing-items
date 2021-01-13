@@ -1,12 +1,25 @@
-.wrapper.active-mode {
-
-    .price--hidden-white {
-        display: block;
-        color: $very-light;
+.main__container.active-mode {
+  .main__price {
+    &.price--hidden-white {
+      display: block;
+      color: $very-light;
     }
 
-    .price--hidden-grey {
-        display: block;
-        color: $dark-blue;
+    &.price--hidden-grey {
+      display: block;
+      color: $dark-blue;
     }
+
+    &.price--white {
+      display: none;
+    }
+
+    &.price--grey {
+      display: none;
+    }
+  }
+}
+
+.btn__toggle.active::before {
+  left: 0.3em;
 }
